@@ -2,9 +2,10 @@ package com.proyecto.springboot.form.entities;
 
 import java.util.Objects;
 
-public class DocumentResource extends Resource{
+public class DocumentResource extends Resource  implements IResource{
 	
 	private int num_pages;
+	
 	
 	public DocumentResource(DocumentResource R) {
 		// TODO Auto-generated constructor stub

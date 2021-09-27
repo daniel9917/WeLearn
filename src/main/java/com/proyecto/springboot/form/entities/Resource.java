@@ -1,12 +1,11 @@
 package com.proyecto.springboot.form.entities;
 
-public abstract class Resource {
+public class Resource{
 		
 	protected String name;
 	protected String url;	
 	
-	public abstract String deploy();
-	public abstract String type();
+
 	
 	public Resource() {
 	}
@@ -27,8 +26,9 @@ public abstract class Resource {
 		this.url = url;
 	}
 	
-	
-		
-	
-
+	public Resource(String name, String url) {
+		super();
+		this.name = name;
+		this.url = url;
+	}
 }

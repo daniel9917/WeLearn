@@ -2,7 +2,7 @@ package com.proyecto.springboot.form.entities;
 
 import java.util.Objects;
 
-public class VideoResource extends Resource{
+public class VideoResource extends Resource  implements IResource{
 	
 	private int lenght_ms;
 	

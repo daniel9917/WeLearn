@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "f73c368d-94ed-467c-9316-dd35a5d09cbd",
+		"name": "WeLearn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 46515,\r\n    \"name\" : \"Leoponcio Girneldate\",\r\n    \"email\" : \"leoponcio@girneldate.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetResources",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/resources/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"resources",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostVideoResource",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1234,\r\n    \"name\" : \"Java Course\",\r\n    \"url\" : \"youtube.com/videos666\",\r\n    \"lenght_ms\" : 5465\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/resources/video/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"resources",
+						"video",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostDocumentResource",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1234,\r\n    \"name\" :  \"How to Chess\",\r\n    \"url\" : \"springdocuments.com/chess\",\r\n    \"num_pages\" : 666\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/resources/document",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"resources",
+						"document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCourses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/courses/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"courses",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostCourse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 56456,\r\n    \"name\" : \"como ser un profesional\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/courses/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"courses",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

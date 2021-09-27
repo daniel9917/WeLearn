@@ -9,12 +9,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.proyecto.springboot.form.entities.Resource;
+import com.proyecto.springboot.form.entities.DTO.ResourceDTO;
 import com.proyecto.springboot.form.factory.Factory;
 
 import javassist.NotFoundException;
 
+@RestController
 @RequestMapping("resources/")
 public class ResourceController {
 	
@@ -34,11 +37,11 @@ public class ResourceController {
 	}
 	
 	@PostMapping("/{type}")
-	public @ResponseBody Resource addResource(@RequestBody Resource r, @PathVariable String type) throws NotFoundException {
+	public @ResponseBody Resource addResource(@RequestBody ResourceDTO r, @PathVariable String type) throws NotFoundException {
 		//Se fabrica el recurso.
 		Resource actual = this.resourceFactory.createResource(type, r);		
 		this.resources.add(actual);
-		return r;
+		return actual;
 	}
 
 }

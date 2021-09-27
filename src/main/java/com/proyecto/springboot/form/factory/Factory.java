@@ -3,6 +3,7 @@ package com.proyecto.springboot.form.factory;
 import com.proyecto.springboot.form.entities.DocumentResource;
 import com.proyecto.springboot.form.entities.Resource;
 import com.proyecto.springboot.form.entities.VideoResource;
+import com.proyecto.springboot.form.entities.DTO.ResourceDTO;
 
 import javassist.NotFoundException;
 
@@ -25,12 +26,12 @@ public class Factory implements Fabricator {
 	}
 
 	@Override
-	public Resource createResource(String type, Resource R) throws NotFoundException {
+	public Resource createResource(String type, ResourceDTO R) throws NotFoundException {
 		switch (type) {
 			case "video":
-				return new VideoResource((VideoResource) R);
-			case "documento":
-				return new DocumentResource((DocumentResource) R);
+				return new VideoResource(R.getName(), R.getUrl(), R.getLenght_ms());
+			case "document":
+				return new DocumentResource(R.getName(), R.getUrl(),R.getNum_pages());
 			default :
 				throw new NotFoundException("No se encontro el tipo de recurso.");
 		} 
